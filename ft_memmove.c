@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 08:13:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 10:28:34 by crtorres         ###   ########.fr       */
+/*   Created: 2022/09/16 13:33:47 by crtorres          #+#    #+#             */
+/*   Updated: 2022/09/16 18:28:57 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include<string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	len;
-	size_t	c;
-	size_t	d;
+	char	*s;
+	char	*d;
+	size_t	i;
 
-	len = ft_strlen(src);
-	c = 0;
-	while (dst[c] && c < size)
-		c++;
-	d = 0;
-	while (src[c] && c + d + 1 < size)
-		dst[c + d] = src[d];
-		d++;
-	if (d != 0)
-		dst[c + d] = '\0';
-	return (len + c);
+	s = (char *)src;
+	d = (char *)dst;
+	i = 0;
+	if (d > s)
+		while (len-- > 0)
+			d[len] = s[len];
+	else
+		while (i < len)
+			d[i] = s[i];
+			i++;
+	return (dst);
 }

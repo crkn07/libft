@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 08:13:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 10:28:34 by crtorres         ###   ########.fr       */
+/*   Created: 2022/09/14 16:58:25 by crtorres          #+#    #+#             */
+/*   Updated: 2022/09/14 17:38:20 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+/*include<libft.a>*/
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	ft_isalnum(int c)
 {
-	size_t	len;
-	size_t	c;
-	size_t	d;
-
-	len = ft_strlen(src);
-	c = 0;
-	while (dst[c] && c < size)
-		c++;
-	d = 0;
-	while (src[c] && c + d + 1 < size)
-		dst[c + d] = src[d];
-		d++;
-	if (d != 0)
-		dst[c + d] = '\0';
-	return (len + c);
+	if ((c > 47 && c < 58) || (c > 64 && c < 91) || (c > 96 && c < 123))
+	{
+		return (1);
+	}
+	return (0);
 }

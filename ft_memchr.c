@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 08:13:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 10:28:34 by crtorres         ###   ########.fr       */
+/*   Created: 2022/09/16 16:39:12 by crtorres          #+#    #+#             */
+/*   Updated: 2022/09/18 16:18:31 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	size_t	len;
-	size_t	c;
-	size_t	d;
+	size_t	i;
 
-	len = ft_strlen(src);
-	c = 0;
-	while (dst[c] && c < size)
-		c++;
-	d = 0;
-	while (src[c] && c + d + 1 < size)
-		dst[c + d] = src[d];
-		d++;
-	if (d != 0)
-		dst[c + d] = '\0';
-	return (len + c);
+	i = 0;
+	while (i < n)
+	{
+		if ((((unsigned char *)str)[i]) == (unsigned char)c)
+			return ((unsigned char *)str + i);
+			i++;
+	}
+	return (0);
 }

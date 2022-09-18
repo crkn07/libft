@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 08:13:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 10:28:34 by crtorres         ###   ########.fr       */
+/*   Created: 2022/09/16 12:44:38 by crtorres          #+#    #+#             */
+/*   Updated: 2022/09/16 16:31:07 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include<string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	len;
-	size_t	c;
-	size_t	d;
+	size_t	a;
 
-	len = ft_strlen(src);
-	c = 0;
-	while (dst[c] && c < size)
-		c++;
-	d = 0;
-	while (src[c] && c + d + 1 < size)
-		dst[c + d] = src[d];
-		d++;
-	if (d != 0)
-		dst[c + d] = '\0';
-	return (len + c);
+	a = 0;
+	if (dst == 0 && src == 0)
+		return (0);
+	if (src == dst)
+		return (dst);
+	while (a < n)
+	{	
+		(((unsigned char *)dst)[a]) = (((unsigned char *)src)[a]);
+		a++;
+	}
+	return (dst);
 }

@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 08:13:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 10:28:34 by crtorres         ###   ########.fr       */
+/*   Created: 2022/09/18 15:22:55 by crtorres          #+#    #+#             */
+/*   Updated: 2022/09/18 16:33:48 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+static char	*ft_strcpy(char *dst, const char *src)
 {
-	size_t	len;
-	size_t	c;
-	size_t	d;
+	int	i;
 
-	len = ft_strlen(src);
-	c = 0;
-	while (dst[c] && c < size)
-		c++;
-	d = 0;
-	while (src[c] && c + d + 1 < size)
-		dst[c + d] = src[d];
-		d++;
-	if (d != 0)
-		dst[c + d] = '\0';
-	return (len + c);
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src [i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}
+
+char	*ft_strdup(const char *s)
+{
+	char	*c;
+
+	c = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (c == NULL)
+		return (NULL);
+	return (ft_strcpy(c, s));
 }
