@@ -6,11 +6,12 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:44:52 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 16:09:55 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/19 15:44:24 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
+/*#include <ctype.h>*/
 
 int	ft_toupper(int c)
 {

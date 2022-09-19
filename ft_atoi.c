@@ -6,13 +6,14 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 11:16:15 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 10:02:22 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/19 15:36:12 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-/*#include<stdio.h>*/
-#include<stdlib.h>
+#include "libft.h"
+/*#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>*/
 
 int	ft_atoi(const char *str)
 {

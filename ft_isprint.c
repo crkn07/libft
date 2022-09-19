@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
+#include "libft.h"
+/*#include<string.h>
 #include<unistd.h>
-#include<stdio.h>
+#include<stdio.h>*/
 
 int	ft_isprint(int a)
 {

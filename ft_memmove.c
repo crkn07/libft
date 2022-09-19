@@ -6,27 +6,66 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:33:47 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 18:28:57 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/19 16:49:36 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*s;
-	char	*d;
-	size_t	i;
+	unsigned char		*d;
+	unsigned const char	*s;
 
-	s = (char *)src;
-	d = (char *)dst;
-	i = 0;
-	if (d > s)
-		while (len-- > 0)
-			d[len] = s[len];
-	else
-		while (i < len)
-			d[i] = s[i];
-			i++;
+	if (dst < src)
+		return (ft_memcpy(dst, src, len));
+	d = (unsigned char *)dst;
+	s = (unsigned const char *)src;
+	while (len--)
+		d[len] = s[len];
 	return (dst);
 }
+/*
+int		main(int argc, const char *argv[])
+{
+	char	src[] = "lorem ipsum dolor sit amet";
+	char	*dest;
+	int		arg;
+
+	dest = src + 1;
+	alarm(5);
+	if (argc == 1)
+		return (0);
+	else if ((arg = atoi(argv[1])) == 1)
+	{
+		if (dest != ft_memmove(dest, "consectetur", 5))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 22);
+	}
+	else if (arg == 2)
+	{
+		if (dest != ft_memmove(dest, "con\0sec\0\0te\0tur", 10))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 22);
+	}
+	else if (arg == 3)
+	{
+		if (dest != ft_memmove(dest, src, 8))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 22);
+	}
+	else if (arg == 4)
+	{
+		if (src != ft_memmove(src, dest, 8))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 22);
+	}
+	else if (arg == 5)
+	{
+		if (src != ft_memmove(src, dest, 0))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 22);
+	}
+	return (0);
+}
+*/

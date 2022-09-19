@@ -6,11 +6,12 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 12:24:31 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 16:16:59 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/19 15:36:54 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+/*#include <string.h>*/
 
 void	ft_bzero(void *s, size_t n)
 {

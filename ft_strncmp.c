@@ -6,13 +6,14 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 11:38:03 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/16 16:08:18 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/19 15:42:11 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
+/*#include<stdio.h>
 #include<string.h>
-#include<unistd.h>
+#include<unistd.h>*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
