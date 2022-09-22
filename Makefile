@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MAKEFILE                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 14:52:05 by crtorres          #+#    #+#              #
-#    Updated: 2022/09/21 15:48:18 by crtorres         ###   ########.fr        #
+#    Updated: 2022/09/22 14:22:15 by crtorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC = 	ft_atoi.c\
 		ft_putstr_fd.c\
 		ft_strchr.c\
 		ft_strdup.c\
+		ft_striteri.c\
 		ft_strjoin.c\
 		ft_strlcat.c\
 		ft_strlcpy.c\

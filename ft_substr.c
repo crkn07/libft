@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:46:30 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/20 15:04:39 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/22 12:55:50 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,10 @@ int	main(void)
 	var = ft_substr("abcdef", 1, 2);
 	printf("%s\n", var);
 	free(var);
+
+	char *s = ft_substr("tripouille", 0, 42000);
+	printf(s);
+	free(s);
 	return (0);
 }
 */
