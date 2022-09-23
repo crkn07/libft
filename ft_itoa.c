@@ -6,12 +6,12 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:23 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/21 14:04:43 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:39:54 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include "stdio.h"*/
+#include "stdio.h"
 
 static size_t	ft_len(int nb)
 {

@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 11:04:24 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/19 15:41:22 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/22 15:30:48 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 /*#include <unistd.h>
 #include<stdio.h>*/
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	unsigned long int	a;
 

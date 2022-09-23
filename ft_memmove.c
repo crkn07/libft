@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:33:47 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/19 16:49:36 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/23 15:11:27 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*d;
 	unsigned const char	*s;
 
-	if (dst < src)
-		return (ft_memcpy(dst, src, len));
 	d = (unsigned char *)dst;
 	s = (unsigned const char *)src;
-	while (len--)
-		d[len] = s[len];
+	if (dst < src)
+		return (ft_memcpy(dst, src, len));
+	else if (dst > src)
+		while (len--)
+			d[len] = s[len];
 	return (dst);
 }
 /*
