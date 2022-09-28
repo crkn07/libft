@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:18:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/23 15:01:11 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:21:25 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,14 @@ static void	*freemmory(char **memry, size_t aux)
 	return (NULL);
 }
 
+/**
+ * It takes a string, a character, and a pointer to a pointer to a character, and
+ * it saves the words in the string into the pointer to a pointer to a character
+ * 
+ * @param s the string to be split
+ * @param c the character to split the string by
+ * @param str the array of strings that will be returned
+ */
 static void	save_words(const char *s, char c, char **str)
 {
 	size_t	i;

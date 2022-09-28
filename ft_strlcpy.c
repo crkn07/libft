@@ -6,13 +6,23 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 15:05:01 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/19 15:41:06 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/28 18:33:02 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*#include <unistd.h>*/
 
+/**
+ * The function copies the string pointed to by src, including the terminating 
+ * null byte ('\0'), to the buffer pointed to by dst
+ * 
+ * @param dst This is the destination string.
+ * @param src The string to be copied.
+ * @param size The maximum number of bytes to copy from src to dst.
+ * 
+ * @return The length of the string src.
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	a;

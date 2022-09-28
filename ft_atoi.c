@@ -6,15 +6,22 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 11:16:15 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/20 10:13:55 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:18:49 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include<unistd.h>
+#include<unistd.h>
 #include<stdio.h>
-#include<stdlib.h>*/
+#include<stdlib.h>
 
+/**
+ * The function takes a string and returns an integer
+ * 
+ * @param str The string to be converted.
+ * 
+ * @return the integer value of the string.
+ */
 int	ft_atoi(const char *str)
 {
 	int				a;
@@ -45,6 +52,7 @@ int	ft_atoi(const char *str)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_atoi("    +++21is--+-ab567"));
+	printf("%d\n", ft_atoi("    --21"));
+	printf("%d\n", atoi("    -21"));
 }
 */

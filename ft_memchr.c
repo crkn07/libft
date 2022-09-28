@@ -6,13 +6,25 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 16:39:12 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/19 15:39:16 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/28 15:46:10 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*#include <string.h>*/
 
+/**
+ * The function ft_memchr() locates the first occurrence of c (converted to an
+ * unsigned char) in string s
+ * 
+ * @param str This is the pointer to the block of memory where the search is
+ * performed.
+ * @param c The character to search for.
+ * @param n The number of bytes to be searched.
+ * 
+ * @return The address of the first occurence of the character c in the 
+ * string str.
+ */
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	size_t	i;

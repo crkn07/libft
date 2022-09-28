@@ -6,12 +6,21 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 15:22:55 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/18 16:33:48 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:51:38 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * The function ft_strcpy() copies the string pointed to by src, including the
+ * terminating null byte ('\0'), to the buffer pointed to by dst
+ * 
+ * @param dst This is the destination string.
+ * @param src The string to be copied.
+ * 
+ * @return The address of the first character of the string.
+ */
 static char	*ft_strcpy(char *dst, const char *src)
 {
 	int	i;
@@ -26,6 +35,14 @@ static char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
+/**
+ * Ft_strdup() allocates memory for a copy of the string s, does the copy, and
+ * returns a pointer to it
+ * 
+ * @param s The string to be copied.
+ * 
+ * @return A pointer to the first character of the string.
+ */
 char	*ft_strdup(const char *s)
 {
 	char	*c;

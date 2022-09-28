@@ -6,7 +6,7 @@
 #    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 14:52:05 by crtorres          #+#    #+#              #
-#    Updated: 2022/09/23 16:30:23 by crtorres         ###   ########.fr        #
+#    Updated: 2022/09/28 18:10:59 by crtorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,17 +50,25 @@ SRC = 	ft_atoi.c\
 		ft_substr.c\
 		ft_tolower.c\
 		ft_toupper.c\
+		
 
 OBJS = $(SRC:.c=.o)
 		
-BONUS =	
+BONUS =	ft_lstnew.c\
+		ft_lstadd_front.c\
+		ft_lstsize.c\
+		ft_lstlast.c\
+		ft_lstadd_back.c\
+		ft_lstdelone.c\
+		ft_lstclear.c\
+		ft_lstiter.c\
+		
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(SRC) -c
 	ar crs $(NAME) $(OBJS)
 
 clean:
@@ -69,10 +77,11 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 
-re: all clean
+re: fclean all
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	$(CC) $(CFLAGS) $(BONUS) -c
 	ar crs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+re: fclean bonus
 
 .PHONY: all re clean fclean 

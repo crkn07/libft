@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 12:24:31 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/27 17:01:58 by crtorres         ###   ########.fr       */
+/*   Created: 2022/09/26 10:45:44 by crtorres          #+#    #+#             */
+/*   Updated: 2022/09/28 12:58:14 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <string.h>*/
 
-/**
- * Ft_bzero() is a function that writes n zeroed bytes to the string s
- * 
- * @param s This is the pointer to the memory area to be filled.
- * @param n The number of bytes to be set to zero.
- */
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	ft_memset(s, 0, n);
+	t_list	*new;
+
+	new = malloc(1 * sizeof(t_list));
+	if (new)
+	{
+		new -> content = content;
+		new -> next = NULL;
+		return (new);
+	}
+	return (NULL);
 }

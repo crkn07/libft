@@ -6,13 +6,20 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:23 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/22 17:39:54 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:26:01 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "stdio.h"
 
+/**
+ * It returns the number of digits in the number passed to it
+ * 
+ * @param nb the number to be converted
+ * 
+ * @return The length of the number.
+ */
 static size_t	ft_len(int nb)
 {
 	int	len;
@@ -28,6 +35,13 @@ static size_t	ft_len(int nb)
 	return (len);
 }
 
+/**
+ * It takes an integer and returns a string representation of that integer
+ * 
+ * @param n the number to be converted
+ * 
+ * @return A pointer to a string.
+ */
 char	*ft_itoa(int n)
 {
 	int			len;

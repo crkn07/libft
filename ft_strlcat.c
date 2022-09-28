@@ -6,13 +6,24 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 08:13:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/23 15:25:16 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/28 18:28:06 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*#include<unistd.h>*/
 
+/**
+ * The function ft_strlcat() appends the null-terminated string src to the end of
+ * dst. It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the
+ * result
+ * 
+ * @param dst The destination string.
+ * @param src The string to be appended.
+ * @param size the size of the destination buffer
+ * 
+ * @return The length of the string that was copied.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len;

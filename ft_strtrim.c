@@ -6,12 +6,20 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:53:30 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/20 16:48:08 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/28 15:37:31 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * It returns 1 if the character c is in the string set, and 0 otherwise
+ * 
+ * @param c The character to search for in the set.
+ * @param set the set of characters to be searched
+ * 
+ * @return the number of characters in the string that are not in the set.
+ */
 static int	ft_char_in_set(char c, char const *set)
 {
 	size_t	i;
@@ -26,6 +34,14 @@ static int	ft_char_in_set(char c, char const *set)
 	return (0);
 }
 
+/**
+ * It returns a copy of the string s1, without any characters in set
+ * 
+ * @param s1 The string to be trimmed.
+ * @param set the set of characters to trim
+ * 
+ * @return A pointer to a new string.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
