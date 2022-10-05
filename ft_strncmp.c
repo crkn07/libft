@@ -6,15 +6,23 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 11:38:03 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/19 15:42:11 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:59:30 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include<stdio.h>
-#include<string.h>
-#include<unistd.h>*/
 
+/**
+ * The function ft_strncmp() compares the first n characters of 
+ * the strings s1 and s2
+ * 
+ * @param s1 The first string to be compared.
+ * @param s2 The string to compare to.
+ * @param n The maximum number of characters to compare.
+ * 
+ * @return The difference between the first two characters that differ in the
+ * strings s1 and s2.
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

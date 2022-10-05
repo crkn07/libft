@@ -6,7 +6,7 @@
 #    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 14:52:05 by crtorres          #+#    #+#              #
-#    Updated: 2022/09/28 18:10:59 by crtorres         ###   ########.fr        #
+#    Updated: 2022/10/04 19:22:45 by crtorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,22 +54,23 @@ SRC = 	ft_atoi.c\
 
 OBJS = $(SRC:.c=.o)
 		
-BONUS =	ft_lstnew.c\
-		ft_lstadd_front.c\
-		ft_lstsize.c\
-		ft_lstlast.c\
-		ft_lstadd_back.c\
-		ft_lstdelone.c\
-		ft_lstclear.c\
-		ft_lstiter.c\
+BONUS =	ft_lstnew_bonus.c\
+		ft_lstadd_front_bonus.c\
+		ft_lstsize_bonus.c\
+		ft_lstlast_bonus.c\
+		ft_lstadd_back_bonus.c\
+		ft_lstdelone_bonus.c\
+		ft_lstclear_bonus.c\
+		ft_lstiter_bonus.c\
+		ft_lstmap_bonus.c\
 		
 
-BONUS_OBJS = $(BONUS:.c=.o)
+BONUS_OBJS = $(SRC:.c=.o) $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar crs $(NAME) $(OBJS)
+	ar crs $@ $^ 
 
 clean:
 	@$(RM) $(OBJS) $(BONUS_OBJS)
@@ -77,11 +78,11 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 
-re: fclean all
-
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar crs $(NAME) $(OBJS) $(BONUS_OBJS)
-
 re: fclean bonus
 
-.PHONY: all re clean fclean 
+bonus:
+	@make SRC='$(SRC) $(BONUS)'
+
+re: fclean all
+
+.PHONY: all re clean fclean bonus

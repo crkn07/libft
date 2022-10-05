@@ -6,12 +6,25 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:46:30 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/26 17:53:58 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:57:32 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * "ft_substr() returns a pointer to a new string which is a substring of the
+ * string 's' starting at index 'start' and of length 'len'."
+ * 
+ * The first thing we do is check if the string 's' is NULL. If it is, we return
+ * NULL
+ * 
+ * @param s The string to be cut.
+ * @param start the index of the first character to include in the substring.
+ * @param len the length of the substring
+ * 
+ * @return A pointer to a new string.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;

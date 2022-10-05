@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 13:44:52 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/29 18:57:08 by crtorres         ###   ########.fr       */
+/*   Created: 2022/09/26 16:39:03 by crtorres          #+#    #+#             */
+/*   Updated: 2022/09/27 15:48:40 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * If the character is lowercase, subtract 32 from it
- * 
- * @param c The character to be converted.
- * 
- * @return the uppercase version of the character c.
- */
-int	ft_toupper(int c)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (c > 96 && c < 123)
+	t_list	*aux;
+
+	aux = 0;
+	while (*lst)
 	{
-		c = c - 32;
+		aux = (*lst)-> next;
+		ft_lstdelone(*lst, del);
+		*lst = aux;
 	}
-	return (c);
+	*lst = 0;
 }

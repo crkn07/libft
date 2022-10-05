@@ -6,12 +6,20 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:18:20 by crtorres          #+#    #+#             */
-/*   Updated: 2022/09/28 13:21:25 by crtorres         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:51:19 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * It counts the number of words in a string
+ * 
+ * @param str The string to be split.
+ * @param c the character to split the string by
+ * 
+ * @return The number of words in the string.
+ */
 static int	count_words(const char	*str, char c)
 {
 	size_t	countw;
@@ -33,6 +41,14 @@ static int	count_words(const char	*str, char c)
 	return (countw);
 }
 
+/**
+ * It copies a string from a given start index to a given end index
+ * 
+ * @param dst the destination string
+ * @param src the string to be split
+ * @param start the index of the first character to copy
+ * @param last the last index of the string to copy
+ */
 static void	ft_strcpy(char *dst, const char *src, int start, int last)
 {
 	int	i;
@@ -47,6 +63,14 @@ static void	ft_strcpy(char *dst, const char *src, int start, int last)
 	dst[i] = 0;
 }
 
+/**
+ * This function frees the memory allocated to the 2D array of strings.
+ * 
+ * @param memry This is the pointer to the array of pointers.
+ * @param aux This is the number of lines in the file.
+ * 
+ * @return A pointer to a char.
+ */
 static void	*freemmory(char **memry, size_t aux)
 {
 	size_t	i;
@@ -84,7 +108,7 @@ static void	save_words(const char *s, char c, char **str)
 			start = i;
 			while (s[i] != c && s[i] != 0)
 				i++;
-			str[j] = (char *)malloc(sizeof(char) * (i - start +1));
+			str[j] = (char *)malloc(sizeof(char) * (i - start + 1));
 			if (str[j] == 0)
 			{
 				freemmory(str, j);
@@ -98,6 +122,14 @@ static void	save_words(const char *s, char c, char **str)
 	}
 }
 
+/**
+ * It splits a string into words, separated by a character.
+ * 
+ * @param s The string to be split.
+ * @param c the character to split the string by
+ * 
+ * @return A pointer to a pointer to a char.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
